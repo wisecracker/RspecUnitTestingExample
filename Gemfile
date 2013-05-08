@@ -13,6 +13,7 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
+gem 'simplecov', :require => false, :group => :test
 
 # Gems used only for assets and not required
 # in production environments by default.

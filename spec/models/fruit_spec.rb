@@ -11,25 +11,19 @@ describe Fruit do
     end
 
     it "should not be squishy" do # should in shoulda, Then in cucumber
-      @apple.squishy?.should == true
-      @apple.squishy?.should be_true
-      @apple.squishy?.should eq(true)
+      expect(@apple.squishy?).to be_true
     end
 
     it "should remember what class it is using STI" do
       apple = Fruit.find(@apple.id)
-      apple.should_not be_nil
-      apple.should_not == nil
-      apple.should_not eq(nil)
+      expect(apple).to be
 
-      apple.class.should == Apple
-      apple.class.should eq(Apple)
+      expect(apple.class).to be(Apple)
 
-      apple.should == @apple
-      apple.should eq(apple)
+      expect(apple).to eq(@apple)
 
-      apple.is_a?(Fruit).should be_true
-      apple.class.ancestors.should include Fruit
+      expect(apple.is_a?(Fruit)).to be_true
+      expect(apple.class.ancestors).to include Fruit
     end
   end
 
