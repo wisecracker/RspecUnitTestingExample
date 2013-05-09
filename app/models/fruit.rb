@@ -3,6 +3,8 @@ class Fruit < ActiveRecord::Base
 
   belongs_to :stair
 
+  validates :name, :presence => true
+
   def squishy?
     nil
   end

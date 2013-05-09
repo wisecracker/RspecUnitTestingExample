@@ -7,6 +7,9 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
+gem 'pry'
+gem 'pry-debugger'
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'database_cleaner'
